@@ -1,0 +1,39 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Search products</label>
+    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="name of product">
+  </div>
+<div *ngIf="filterText" class="alert alert-primary">
+    {{filterText}} is searched
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>productName</th>
+        <th>category</th>
+        <th>unitsInStock</th>
+        <th>unitPrice</th>
+        <th>VatPrice</th>
+        <th></th>
+         
+    </tr>
+    </thead>
+    <tbody>
+    <!--Adding a pipe in the list( this list is an array of products ) -->
+<tr *ngFor="let product of products | filterPipe:filterText">
+    <td>{{product.productId}}</td>
+    <td>{{product.productName | uppercase}}</td>
+    <td>{{product.categoryId}}</td>
+    <td>{{product.unitsInStock}}</td>
+    <td>{{product.unitPrice | currency}}</td>
+    <td>{{product.unitPrice | vatAdded:10 | currency}}</td>
+    <td><button (click)="addToCart(product)" type="submit" class="btn btn-success">Add to cart</button></td>
+     
+</tr>
+</tbody>
+</table>
