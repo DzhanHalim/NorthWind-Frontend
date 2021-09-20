@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       this.authtService.login(loginModel).subscribe(data=>{
         localStorage.setItem("token",data.data.token);
         this.authtService.user=this.authtService.getUser(localStorage.getItem("token"))
+       
         console.log(this.authtService.user)
         // let obj = this.jwtHelper.decodeToken(this.authtService.token);
         // console.log(obj);

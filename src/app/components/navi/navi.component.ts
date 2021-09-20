@@ -12,4 +12,16 @@ export class NaviComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logged(){
+     if(localStorage.getItem("token")!==null){
+      return true
+     }
+     return false;
+   
+      
+    
+  }
+  logOut(){
+    localStorage.removeItem("token");
+  }
 }

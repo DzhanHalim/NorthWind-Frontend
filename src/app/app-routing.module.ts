@@ -8,12 +8,12 @@ import { HasroleGuard } from './guards/hasrole.guard';
 import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
-  {path:"",pathMatch:"full",component:ProductComponent},
+  {path:"",pathMatch:"full",component:LoginComponent},
   {path:"products",component:ProductComponent},
   {path:"products/category/:categoryId",component:ProductComponent},
   {path:"products/add",component:ProductAddComponent, canActivate:[LoginGuard,HasroleGuard],
   data:{
-    role:'moderator',
+    role:'admin',
     role2:'moderator'
   }
 },

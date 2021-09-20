@@ -6,6 +6,7 @@ import { observable, Observable } from 'rxjs';
 import { Claims } from '../models/claims';
 import { ListResponseModel } from '../models/listResponseModel';
 import { LoginModel } from '../models/loginModel';
+import { RegisterModel } from '../models/registerModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModoel';
 import { TokenModel } from '../models/tokenModel';
@@ -54,8 +55,17 @@ export class AuthService {
     }
   }
   hasRole(){
-     
-     
+     if(localStorage.getItem("token")!=null){
+       if(this.getUser(localStorage.getItem("token")).roles!=null){
+         
+        return this.getUser(localStorage.getItem("token")).roles.includes("moderator")
+       }
+       else{
+         return false;
+       }
+      
+     }
+    return false;
      
      
  
@@ -68,7 +78,9 @@ export class AuthService {
   
    }
    
-
+   register(registerModel:RegisterModel){
+    return this.httpClient.post<SingleResponseModel<ResponseModel>>(this.apiUrl+"register",registerModel);
+   }
    getUser(token:string) : User{
      return this.user = JSON.parse(atob(token.split('.')[1])) as User;
        

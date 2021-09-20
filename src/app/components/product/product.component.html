@@ -5,7 +5,13 @@
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Search products</label>
     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="name of product">
+     
+
   </div>
+  <div class="create-button-div">
+    <td><button *ngIf="hasRole()" routerLink="/products/add"  type="submit" class="btn btn-primary create-button">Create a product</button></td>
+  </div>
+   
 <div *ngIf="filterText" class="alert alert-primary">
     {{filterText}} is searched
 </div>
@@ -20,6 +26,8 @@
         <th>unitPrice</th>
         <th>VatPrice</th>
         <th></th>
+        <th></th>
+        <th></th>
          
     </tr>
     </thead>
@@ -32,7 +40,9 @@
     <td>{{product.unitsInStock}}</td>
     <td>{{product.unitPrice | currency}}</td>
     <td>{{product.unitPrice | vatAdded:10 | currency}}</td>
-    <td><button (click)="addToCart(product)" type="submit" class="btn btn-success">Add to cart</button></td>
+    <td><button  (click)="addToCart(product)" type="submit" class="btn btn-success ">Add to cart</button></td>
+    <td><button *ngIf="hasRole()" (click)="deleteProduct(product)" type="submit" routerLink="products" class="btn btn-danger buttons">Delete product</button></td>
+    <td><button *ngIf="hasRole()" (click)="addToCart(product)" type="submit" class="btn btn-info buttons">Update product</button></td>
      
 </tr>
 </tbody>

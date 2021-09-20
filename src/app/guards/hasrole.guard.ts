@@ -20,9 +20,12 @@ export class HasroleGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       
-       
-        if(this.authService.getUser(localStorage.getItem("token")).roles.includes(route.data.role)){
+       if(this.authService.getUser(localStorage.getItem("token")).roles!=null){
+        if(this.authService.getUser(localStorage.getItem("token")).roles.includes(route.data.role2)){
           return true;
+       }
+       return false;
+         
       
         
       }

@@ -1,0 +1,15 @@
+.create-button-div{
+   
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.create-button{
+    height: 4em;
+    border:3px solid indigo;
+}
+.buttons{
+    border:3px solid indigo;
+
+}

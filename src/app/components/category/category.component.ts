@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category';
+import { AuthService } from 'src/app/services/auth.service';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class CategoryComponent implements OnInit {
   categorys:Category[]=[];
   currentCategory :Category;
   dataLoaded:boolean=false;
-  constructor(private categoryService:CategoryService) { }
+  constructor(private categoryService:CategoryService, private authService:AuthService) { }
 
   ngOnInit(): void {
     this.getCategorys();
@@ -40,6 +41,7 @@ export class CategoryComponent implements OnInit {
     }
   }
 
+   
   getAllCategoryClass(){
     if(!this.currentCategory){
       return"list-group-item active"
