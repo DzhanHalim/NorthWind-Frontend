@@ -1,27 +1,86 @@
-# Northwind
+# ReCapCarProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+1. <b>Basic expressions</b>
+    <ul>     
+      <li>Variables</li>
+      <li>Ref, Out, Params</li>
+      <li>Collections, Generics</li>
+      <li>Inheritance</li>
+      <li>Interface</li>
+      <li>Dependency Injection</li> 
+    </ul>
+    
+2. <b>SQL</b>
+      <ul>
+        <li>Create Databse, Tables</li>
+        <li>Add items to the list, get item from the list</li>
+        <li>CRUD</li>
+        <li> Entity Framework</li>
+        <li>LINQ</li>
+      </ul>
+     
+3. <b>NET Application Architecture</b>
+      <ul>
+        <li>Business</li>
+        <li>ConsoleUI</li>
+        <li>Core</li>
+        <li>Data Access</li>
+        <li>Entities</li>
+      </ul>
+      
+4. <b>API</b>
+      <ul>
+          <li>Rest API (CRUD)</li>
+      </ul>
+     
+5. <b>Data Validation</b>
+    <ul>
+        <li>Autofac</li>
+        <li>FluentValidation</li>
+        <li>AOP / ValidationAspect</li>    
+    </ul>
+      
+6. <b>Security (User registration and login)</b>
+    <ul>
+        <li>Encryption </li>
+        <li>Hashing </li>
+        <li>JWT</li>    
+    </ul>
+    
+7. <b>Aspects (Autofac)</b>
+    <ul>
+        <li>Caching</li>
+        <li>Performance</li>
+        <li>Transaction</li>
+        <li>Validation</li>   
+    </ul>
+8. <b>Frontend Angular</b>
+    <ul>
+        <li>Components</li>
+        <li>Models</li>
+        <li>Services</li>   
+        <li>HttpClient</li>   
+        <li>ListResponseModel</li>   
+        <li>SingelResponseModel</li>   
+        <li>Routes</li>   
+        <li>Filter</li>   
+        <li>click events</li>   
+        <li>Class changing</li>   
+        <li>Activated Route</li>   
+        <li>Pipes</li>   
+        <li>ToastService</li>   
+        <li>CRUD functions</li>   
+        <li>Reactive Forms</li>   
+        <li>Interceptors</li>   
+        <li>Guards</li>   
+        <li>Protected routes</li>   
+        <li>Authentication </li>   
+        <li>Authorisation</li>   
+        <li>JWT</li>   
+        <li>Login</li>   
+        <li>Register</li>   
+        <li>MODULES</li>   
+    </ul>
+    
+    
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
